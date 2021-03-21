@@ -101,11 +101,12 @@ body {
 }
 .header .header__container-truck .header__img {
   position: absolute;
-  top: 15.5em;
+  top: 15em;
+  left: 1em;
   z-index: 20;
 }
 .header .header__container-truck .header__img img {
-  width: 100%;
+  width: 90%;
 }
 
 .nosotros {
@@ -428,12 +429,17 @@ body {
     margin: 1em;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 540px) {
   .header .header__container-truck .base {
     height: 40vh;
   }
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 720px) {
+  .header .header__container-truck .base {
+    height: 50vh;
+  }
+}
+@media screen and (min-width: 1024px) {
   .header .header__logo-menu .header__menu {
     display: none;
   }
@@ -475,10 +481,10 @@ body {
   }
   .header .header__container-truck .header__img {
     top: 12.8em;
-    right: 1em;
+    left: 35%;
   }
   .header .header__container-truck .header__img img {
-    width: 95%;
+    width: 90%;
   }
 
   .nosotros article {
@@ -574,6 +580,14 @@ body {
   .form-contact article .form-contact__info .form-contact__group, .form-contact article .form-contact__info iframe {
     width: 35%;
     margin-right: 10em;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .nuestrasEmpresas article .nuestrasEmpresas__logos {
+    justify-content: space-between;
+  }
+  .nuestrasEmpresas article .nuestrasEmpresas__logos img {
+    width: 10%;
   }
 }
 
