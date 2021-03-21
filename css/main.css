@@ -83,20 +83,25 @@ body {
   font-size: 1.2em;
   font-weight: bold;
 }
-.header .base {
+.header .header__container-truck {
   width: 100%;
-  height: 10em;
+  height: 100%;
+  box-sizing: border-box;
+}
+.header .header__container-truck .base {
+  width: 100%;
+  height: 30vh;
   background: var(--red);
   position: relative;
   clip-path: polygon(0 59%, 100% 0, 100% 100%, 0 100%);
-  z-index: 90;
+  z-index: 10;
 }
-.header .header__img {
+.header .header__container-truck .header__img {
   position: absolute;
-  top: 14.5em;
-  z-index: 100;
+  top: 15.5em;
+  z-index: 20;
 }
-.header .header__img img {
+.header .header__container-truck .header__img img {
   width: 100%;
 }
 
@@ -117,7 +122,7 @@ body {
   box-shadow: 28px 25px 47px -45px rgba(0, 0, 0, 0.75);
 }
 .nosotros article p {
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 .nosotros article input {
   width: 8em;
@@ -180,7 +185,7 @@ body {
   flex-direction: column;
 }
 .servicios article .servicios__service img {
-  width: 5em;
+  height: 3.5em;
   margin: 0.5em 0;
 }
 .servicios article .servicios__service .servicios__info {
@@ -209,7 +214,7 @@ body {
   padding: 1em 0;
 }
 .servicios-empresa article img {
-  width: 6em;
+  height: 3.5em;
   margin: 1em 0;
 }
 .servicios-empresa article .servicios-empresa__info {
@@ -222,7 +227,7 @@ body {
   text-align: center;
 }
 .servicios-empresa article .servicios-empresa__info p {
-  font-size: 0.9em;
+  font-size: 0.8em;
   padding: 0 1.5em;
 }
 .servicios-empresa article .servicios-empresa__info p span {
@@ -257,7 +262,7 @@ body {
   margin: 1em 0 0 1em;
 }
 .servicios-citas article .servicio-citas__container .servicio-citas__cita p {
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-style: italic;
   margin: 1em 0.5em 1em 1em;
 }
@@ -284,7 +289,7 @@ body {
   margin: 1.5em 0 0 0;
 }
 .clientes article .clientes__clients p {
-  font-size: 0.9em;
+  font-size: 0.8em;
   margin-bottom: 5em;
 }
 
@@ -300,18 +305,19 @@ body {
 }
 .form article form input {
   width: 100%;
-  font-size: 0.9em;
+  font-size: 0.8em;
   border: none;
   margin: 1em 0;
   padding: 1em 0 0 0;
   background: none;
   border-bottom: 0.1em solid var(--grey);
 }
-.form article form input[type=file], .form article form input[type=button] {
-  width: 36%;
-  border: none;
+.form article form input[type=file] {
+  width: 45%;
+  margin-right: 1em;
 }
 .form article form input[type=button] {
+  width: 8em;
   background: var(--grey-btn);
   border-radius: 5em;
   margin-left: 1em;
@@ -319,6 +325,7 @@ body {
   color: var(--white);
 }
 .form article form input[type=submit] {
+  display: block;
   width: 8em;
   margin: 1em 0;
   border: none;
@@ -345,7 +352,7 @@ body {
 }
 .form-contact article form input {
   width: 100%;
-  font-size: 0.9em;
+  font-size: 0.8em;
   border: none;
   margin: 1em 0;
   padding: 1em 0 0 0;
@@ -358,21 +365,42 @@ body {
   border: none;
   background: var(--red);
   color: #FFFCFC;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-family: "Roboto", sans-serif;
   padding: 1em;
   border-radius: 5em;
   margin-bottom: 2em;
 }
-.form-contact article img {
-  width: 1.2em;
+.form-contact article .contact {
+  width: 100%;
+  height: 100%;
 }
-.form-contact article p {
+.form-contact article .contact img {
+  width: 1.2em;
+  margin-right: 0.5em;
+}
+.form-contact article .contact p {
   display: inline-block;
   width: 90%;
+  font-size: 0.7em;
 }
 .form-contact article iframe {
   margin: 1em 0;
+}
+
+@media screen and (min-width: 375px) {
+  .nuestrasEmpresas article .nuestrasEmpresas__logos {
+    flex-direction: row;
+  }
+  .nuestrasEmpresas article .nuestrasEmpresas__logos img {
+    width: 40%;
+    margin: 1em;
+  }
+}
+@media screen and (min-width: 720px) {
+  .header .header__container-truck .base {
+    height: 40vh;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
